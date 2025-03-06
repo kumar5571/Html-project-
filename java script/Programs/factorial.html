@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Factorial of a number</title>
+    <script>
+        main();
+        function main()
+        {
+            console.log(fact(5,1));
+        }
+        function fact(num,product)
+        {
+            if(num==0)
+            return product;
+            product*=num;
+            
+            return fact((num-1),product);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

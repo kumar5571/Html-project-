@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>count of given number</title>
+    <script>
+        main();
+        function main()
+        {
+            console.log(sum(12345,0));
+        }
+        function sum(num,count)
+        {
+            if(num==0) 
+            return count;
+            return sum(Math.trunc(num/10),count+1);
+
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

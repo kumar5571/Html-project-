@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sum of given digits</title>
+    <script>
+        main();
+        function main()
+        {
+             console.log(sumofdigits(12345,0))
+        }
+        function sumofdigits(num,sum)
+        {
+            if(num==0)
+            return sum;
+            sum+=num%10;
+            return sumofdigits(Math.trunc(num/10),sum);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Alternate even no in range</title>
+    <script>
+        main();
+        function main(){
+            let n=(prompt("enter the range: "));
+            let count=1;
+            evennum(2,n);
+        }
+        function evennum(i,n){
+            if(i>n) return;
+            if(i%2==0){
+            console.log(i);}
+            // count+=2;
+            evennum(i+4,n);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

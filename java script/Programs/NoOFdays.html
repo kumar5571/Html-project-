@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>No of Days in a Month </title>
+    <script>
+        main();
+        function main()
+        {
+           let y=(prompt("enter the year"));
+           let m=(prompt("enter the month"));
+
+        //    switch(m)
+        //    {
+
+        //     case 1 : console.log("31 days");
+        //               break;
+
+        //     case 3 :console.log("31 days");
+        //               break;
+
+        //     case 5 : console.log("31 days");
+        //               break;
+
+        //     case 7 : console.log("31 days");
+        //               break;
+
+        //     case 8 : console.log("31 days");
+        //               break;
+
+        //     case 10 :console.log("31 days");
+        //               break;
+ 
+        //     case 12 : console.log("31 days");
+        //               break;
+
+        //     case 4 :console.log("30 days");
+        //                break;
+        //     case 6 :onsole.log("30 days");
+        //                break;
+        //     case 9 : onsole.log("30 days");
+        //                break;
+        //     case 11 : console.log("30 days");
+        //                break;
+
+        //     case 2 : if(y%400==0 || (y%4==0 && y%100!=0))
+        //     {
+        //        console.log("29 days");
+        //     }else{
+        //         console.log("28 days");
+        //     }
+        //     break;
+
+        //     default : console.log("invalid input");
+        //               break;
+
+        //    }
+
+        if(m==1 || m==3 || m==5 ||  m==7 || m==8 || m==10 || m==12)
+        {
+            console.log("31 days");
+        }
+        else if( m==4 || m==6 || m==9 ||11) 
+        {
+            console.log("30 days");
+        } else if(m==2){
+             if(y%400==0 || ( y%4==0 && y%100))
+             {
+                console.log("29 days");
+             }else{
+                confirm.log("28 dyas");
+             }
+        } else{
+            console.log("invalid input");
+        }
+      
+    }
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

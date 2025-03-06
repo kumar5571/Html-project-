@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="header">This is Header</h1>
+    <div>
+        <h2>List of cousrses:- </h2>
+        <ol>
+            <li class="course">Html</li>
+            <li class="course">CSs</li>
+            <li>JavaScript</li>
+        </ol>
+    </div>
+
+    <!-- //script code// -->
+
+    <script>
+
+        let bodyTag=document.body;
+        console.log(bodyTag);
+
+        let h1Tag=document.getElementById('header');
+        console.log(h1Tag);
+
+        let listTags=document.getElementsByClassName('course');
+        console.log(listTags);
+        
+        let tags=document.getElementsByTagName('h1');
+        console.log(tags);
+
+        let cssSelector=document.querySelector('.course');
+        console.log(cssSelector);
+
+        cssSelector=document.querySelectorAll('.course');
+        console.log(cssSelector);
+
+    </script>
+</body>
+</html>

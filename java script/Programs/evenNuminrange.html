@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Even num in Range</title>
+    <script>
+        main();
+        function main(){
+            let n=(prompt("enter the rangre"));
+            evennum(2,n);
+        }
+        function evennum(i,n){
+            if(i>n) return;
+           if(i%2==0){
+           console.log(i);}
+          evennum(i+2,n);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

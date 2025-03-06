@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Amazon Login form</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <nav class="navbar bg-dark navbar-dark">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand">🛒Amazon</a>
+        </div>
+    </nav>	
+    <section class="container-fluid mt-4">
+        <div class="row">
+            <div class="col-5 m-auto">
+                <div class="card">
+                    <div class="card-header bg-dark text-white">
+                        <h2 class="text-center">Login here</h2>
+                    </div>
+                    <div class="card-body">
+                        <form id="login-form">
+                            <div class="form-group">
+                                <input type="text" placeholder="Enter the UserName/Email/Phone" class="form-control" value="kiran" id="usn-box">
+                            </div>
+
+
+                            <div class="form-group mt-2">
+                                <input type="text" placeholder="Enter the Password" class="form-control" value="kk@102" id="pw-box">
+                            </div>
+
+
+                            <div class="form-group mt-2">
+                                <input type="submit" class="btn btn-dark">
+                            </div>
+                        </form>
+                    </div>
+                 </div>
+            </div>
+        </div>
+    </section>
+    
+</body>
+<!-- Script--Code -->
+<script>
+   let usnbox=document.getElementById('usn-box');
+   let Pwbox=document.getElementById('pw-box');
+   let loginform=document.getElementById('login-form');
+
+   loginform.addEventListener('submit',function(e)
+   {
+        e.preventDefault();
+        // console.log("form is submitted");
+        let UserName=usnbox.value;
+        let Password=Pwbox.value;
+        // console.log(UserName,Password);
+
+        let newUser={};
+        newUser.usn=UserName;
+        newUser.Password=Password;
+        console.log(newUser);
+
+        usnbox.value="";
+        Pwbox.value="";
+    })
+     
+</script>
+</html>

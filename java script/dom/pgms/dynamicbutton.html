@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        button {
+            border: 0px;
+            outline: 0px;
+            padding: 7px 15px;
+            border-radius: 100%;
+        }
+        .active {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar bg-dark navbar-dark">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand">🛒Amazon</a>
+        </div>
+    </nav>
+
+    <section>
+        <div class="row">
+            <div class="col-6 m-auto">
+                <div class="card mt-5">
+                    <div class="card-header">
+                        <div class="row text-center">
+                            <div class="col-4">
+                                <button id="btn1" class="active">1</button>
+                            </div>
+                            <div class="col-4">
+                                <button id="btn2">2</button>
+                            </div>
+                            <div class="col-4">
+                                <button id="btn3">3</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body text-center">
+                         <h2 id="message">Good Morning</h2>
+                    </div>
+                    <div class="card-footer">
+                        <div class="row text-center">
+                            <div class="col-4">
+                                <button id="previous">Previous</button>
+                            </div>
+                            <div class="col-4">
+                            <!-- Empty button -->
+                            </div>
+                            <div class="col-4">
+                                <button id="next">Next</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const buttons = [
+            { id: "btn1", message: "Good Morning" },
+            { id: "btn2", message: "Happy Morning" },
+            { id: "btn3", message: "Good Night" },
+        ];
+        let currentIndex = 0;
+
+        const updateUI = () => {
+            // Update button states
+            buttons.forEach((button, index) => {
+                const btnElement = document.getElementById(button.id);
+                if (index === currentIndex) {
+                    btnElement.classList.add("active");
+                } else {
+                    btnElement.classList.remove("active");
+                }
+            });
+            // Update message
+            document.getElementById("message").innerText = buttons[currentIndex].message;
+        };
+
+        document.getElementById("next").addEventListener("click", () => {
+            if (currentIndex < buttons.length - 1) {
+                currentIndex++;
+                updateUI();
+            }
+        });
+
+        document.getElementById("previous").addEventListener("click", () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateUI();
+            }
+        });
+
+        // Initialize UI
+        updateUI();
+    </script>
+</body>
+</html>

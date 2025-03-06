@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sum of even num</title>
+    <script>
+        main();
+        function main(){
+         console.log(12345,0);
+        }
+        function sumofdigits(num,sum){
+            if(num==0) return num;
+            if((num%10)%2==0){
+                return num%10 + sumofdigits(Math.trunc (num/10));
+            }else{
+                return sumofdigits(Math.trunc(num/10));
+            }
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
